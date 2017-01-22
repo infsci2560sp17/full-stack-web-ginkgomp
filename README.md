@@ -1,15 +1,27 @@
-# TODO : Your Project Name
+# YukiAndYuto
 
-TODO : Please provide a detailed project description.
+1. What is the proposed name for your Web application?
+
+2. Who is the target audience for your Web application?
+
+3. What problem is it intended to solve for the target audience?
+
+4. How will it meet the minimum project requirements?
+
+5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
+
 
 ## Build status
 
-TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-ginkgomp.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-ginkgomp)
+
+## Changelog
+
+[Changelog]()
 
 ## Web Site
 
-[Project Web Site](https://young-shore-19904.herokuapp.com/)
+[YukiAndYuto](https://young-shore-19904.herokuapp.com/)
 ![](https://...)
 
 ## Key Features
