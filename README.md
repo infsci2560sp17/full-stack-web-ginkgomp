@@ -18,7 +18,7 @@
 
 ## Changelog
 
-[Changelog]()
+[Changelog](/CHANGELOG.md)
 
 ## Web Site
 
