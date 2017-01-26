@@ -16,7 +16,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
     - How will it meet the minimum project requirements?
     - Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
 
-## [v1.1]() - 2017-01-21
+## [v1.1](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/...v1.1) - 2017-01-21
 ### Added
 - Cloned, configured, and compiled the scaffold project.
 - Configured developer workspace.
