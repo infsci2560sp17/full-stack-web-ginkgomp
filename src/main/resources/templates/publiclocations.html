@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Home</title>
+    </head>
+    <body>
+        <h1>Pet-friendly Public Location Lists</h1>
+
+        <div>
+            <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>Location Name</th>
+                    <th>Location Type</th>
+                    <th>Address</th>
+                </tr>
+                <tr data-th-each="location : ${locations}">
+                    <td data-th-text="${location.id}"></td>
+                    <td data-th-text="${location.locationName}"></td>
+                    <td data-th-text="${location.locationType}"></td>
+                    <td data-th-text="${location.address}"></td>
+                </tr>
+            </table>
+        </div>
+
+        <hr />
+        Add Pet-friendly Public Locations:<br />
+        <form data-th-action="@{/publiclocations/add}" name="addLocationForm" method="post">
+            Location Name: <input type="text" name="locationname" /><br />
+            Location Type:<br />
+            <input type="radio" name="locationType" value="Unknown" checked="checked" /> Unknown<br />
+            <input type="radio" name="locationType" value="PublicPark" /> Public Park<br />
+            <input type="radio" name="locationType" value="CoffeeShop" /> Coffee Shop<br />
+            <input type="radio" name="locationType" value="Hotel" /> Hotel<br />
+            <input type="radio" name="locationType" value="Restaurant" /> Restaurant<br />
+            <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
+            <input type="submit" value="Add Location"/>
+            Address: <input type="text" name="address" />
+        </form>
+
+        <hr />
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
