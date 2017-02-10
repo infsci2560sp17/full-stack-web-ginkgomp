@@ -50,11 +50,11 @@ public class PublicLocation {
       this.locationType = locationType;
       this.address = address;
   }
-    }
+    
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address " ]";
+        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address + " ]";
     }
 
     @Override

@@ -1,8 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Dvd;
-import edu.infsci2560.models.Dvd.WorkoutType;
-import edu.infsci2560.repositories.DvdRepository;
+import edu.infsci2560.models.PublicLocation;
+import edu.infsci2560.models.PublicLocation.LocationType;
+import edu.infsci2560.repositories.LocationRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +19,10 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        DvdRepository repository = ctx.getBean(DvdRepository.class);
-        repository.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
-        repository.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
-        repository.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
+        LocationRepository repository = ctx.getBean(LocationRepository.class);
+        repository.save(new PublicLocation(1L, "Huston Woods", LocationType.NaturalAttractions,"XX" ));
+        repository.save(new PublicLocation(2L, "XXX", LocationType.Unknown,"XX"));
+        repository.save(new PublicLocation(3L, "XXX", LocationType.Unknown,"XX"));
     }
 
 
