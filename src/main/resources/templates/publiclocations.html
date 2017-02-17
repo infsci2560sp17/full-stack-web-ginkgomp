@@ -14,7 +14,7 @@
                     <th>Location Type</th>
                     <th>Address</th>
                 </tr>
-                <tr data-th-each="location : ${locations}">
+                <tr data-th-each="location : ${publiclocations}">
                     <td data-th-text="${location.id}"></td>
                     <td data-th-text="${location.locationName}"></td>
                     <td data-th-text="${location.locationType}"></td>
@@ -34,7 +34,7 @@
             <input type="radio" name="locationType" value="Hotel" /> Hotel<br />
             <input type="radio" name="locationType" value="Restaurant" /> Restaurant<br />
             <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
-            Provide Address: <input type="text" name="address" />
+            Provide Address: <input type="text" name="address" /> <br />
             <input type="submit" value="Add Location"/><br />
         </form>
 
