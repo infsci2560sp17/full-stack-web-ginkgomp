@@ -90,7 +90,7 @@
 		{
 			"name": "Get Locations",
 			"request": {
-				"url": "http://localhost:5000/public/api/publiclocations",
+				"url": "http://localhost:5000/public/api/locations",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -101,7 +101,7 @@
 		{
 			"name": "Add Location",
 			"request": {
-				"url": "http://localhost:5000/public/api/publiclocations",
+				"url": "http://localhost:5000/public/api/locations",
 				"method": "POST",
 				"header": [
 					{

@@ -1,7 +1,7 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.PublicLocation;
-import edu.infsci2560.models.PublicLocation.LocationType;
+import edu.infsci2560.models.Location;
+import edu.infsci2560.models.Location.LocationType;
 import edu.infsci2560.repositories.LocationRepository;
 
 import org.slf4j.Logger;
@@ -20,9 +20,9 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         LocationRepository repository = ctx.getBean(LocationRepository.class);
-        repository.save(new PublicLocation(1L, "Huston Woods", LocationType.NaturalAttractions,"Oxford, OH" ));
-        repository.save(new PublicLocation(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA"));
-        repository.save(new PublicLocation(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA"));
+        repository.save(new Location(1L, "Huston Woods", LocationType.NaturalAttractions,"Oxford, OH" ));
+        repository.save(new Location(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA"));
+        repository.save(new Location(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA"));
     }
 
 

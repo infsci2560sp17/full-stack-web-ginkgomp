@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.PublicLocation;
-import edu.infsci2560.models.PublicLocation.LocationType;
+import edu.infsci2560.models.Location;
+import edu.infsci2560.models.Location.LocationType;
 import edu.infsci2560.repositories.LocationRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,26 +28,26 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Wenwen Sun
  */
 @RestController
-@RequestMapping("/public/api/publiclocations")
+@RequestMapping("/public/api/locations")
 public class LocationsService {
 
     @Autowired
     private LocationRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<PublicLocation>> list() {
+    public ResponseEntity<Iterable<Location>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<PublicLocation> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Location> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<PublicLocation> create(@RequestBody PublicLocation location) {
+    public ResponseEntity<Location> create(@RequestBody Location location) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(location), headers, HttpStatus.OK);
     }

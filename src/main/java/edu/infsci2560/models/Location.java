@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author Wenwen Sun
  */
 @Entity
-public class PublicLocation {
+public class Location {
 
     private static final long serialVersionUID = 1L;
 
@@ -37,20 +37,20 @@ public class PublicLocation {
     protected LocationType locationType;
     protected String address;
 
-    public PublicLocation() {
+    public Location() {
         this.id = Long.MAX_VALUE;
         this.locationName = null;
         this.locationType = LocationType.Unknown;
         this.address = null;
     }
 
-    public PublicLocation(Long id, String locationName, LocationType locationType, String address) {
+    public Location(Long id, String locationName, LocationType locationType, String address) {
       this.id = id;
       this.locationName = locationName;
       this.locationType = locationType;
       this.address = address;
   }
-    
+
 
     @Override
     public String toString() {

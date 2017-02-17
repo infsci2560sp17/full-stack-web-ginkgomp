@@ -5,11 +5,11 @@
  */
 package edu.infsci2560.repositories;
 
-import edu.infsci2560.models.PublicLocation;
+import edu.infsci2560.models.Location;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  *
  * @author Wenwen Sun
  */
-public interface LocationRepository extends PagingAndSortingRepository<PublicLocation, Long> {}
+public interface LocationRepository extends PagingAndSortingRepository<Location, Long> {}

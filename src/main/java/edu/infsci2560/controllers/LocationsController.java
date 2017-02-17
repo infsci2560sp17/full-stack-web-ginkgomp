@@ -5,7 +5,7 @@
  */
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.PublicLocation;
+import edu.infsci2560.models.Location;
 import edu.infsci2560.repositories.LocationRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +34,8 @@ public class LocationsController {
         return new ModelAndView("locations", "locations", repository.findAll());
     }
 
-    @RequestMapping(value = "publiclocations/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid PublicLocation location, BindingResult result) {
+    @RequestMapping(value = "locations/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView create(@ModelAttribute @Valid Location location, BindingResult result) {
         repository.save(location);
         return new ModelAndView("locations", "locations", repository.findAll());
     }
