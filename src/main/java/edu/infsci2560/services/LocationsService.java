@@ -47,8 +47,8 @@ public class LocationsService {
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Location> create(@RequestBody Location location) {
+    public ResponseEntity<Location> create(@RequestBody Location locations) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(location), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(locations), headers, HttpStatus.OK);
     }
 }
