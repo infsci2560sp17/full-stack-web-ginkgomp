@@ -77,8 +77,8 @@ public class Location {
     /**
      * @param name the locationName to set
      */
-    public void setLocationName(String name) {
-        this.locationName = name;
+    public void setLocationName(String locationName) {
+        this.locationName = locationName;
     }
 
     /**
