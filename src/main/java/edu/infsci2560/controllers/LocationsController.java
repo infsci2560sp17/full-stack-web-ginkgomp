@@ -29,15 +29,15 @@ public class LocationsController {
     @Autowired
     private LocationRepository repository;
 
-    @RequestMapping(value = "publiclocations", method = RequestMethod.GET)
+    @RequestMapping(value = "locations", method = RequestMethod.GET)
     public ModelAndView index() {
-        return new ModelAndView("publiclocations", "publiclocations", repository.findAll());
+        return new ModelAndView("locations", "locations", repository.findAll());
     }
 
     @RequestMapping(value = "publiclocations/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid PublicLocation location, BindingResult result) {
         repository.save(location);
-        return new ModelAndView("publiclocations", "publiclocations", repository.findAll());
+        return new ModelAndView("locations", "locations", repository.findAll());
     }
 
 }
