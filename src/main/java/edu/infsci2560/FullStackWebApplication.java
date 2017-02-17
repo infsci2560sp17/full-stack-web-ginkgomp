@@ -20,9 +20,9 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         LocationRepository repository = ctx.getBean(LocationRepository.class);
-        repository.save(new PublicLocation(1L, "Huston Woods", LocationType.NaturalAttractions,"XX" ));
-        repository.save(new PublicLocation(2L, "XXX", LocationType.Unknown,"XX"));
-        repository.save(new PublicLocation(3L, "XXX", LocationType.Unknown,"XX"));
+        repository.save(new PublicLocation(1L, "Huston Woods", LocationType.NaturalAttractions,"Oxford, OH" ));
+        repository.save(new PublicLocation(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA"));
+        repository.save(new PublicLocation(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA"));
     }
 
 

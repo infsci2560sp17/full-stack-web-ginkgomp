@@ -88,9 +88,9 @@
 			"response": []
 		},
 		{
-			"name": "Get DVD's",
+			"name": "Get Locations",
 			"request": {
-				"url": "http://localhost:5000/public/api/dvds",
+				"url": "http://localhost:5000/public/api/publiclocations",
 				"method": "GET",
 				"header": [],
 				"body": {},
@@ -99,9 +99,9 @@
 			"response": []
 		},
 		{
-			"name": "Add DVD",
+			"name": "Add Location",
 			"request": {
-				"url": "http://localhost:5000/public/api/dvds",
+				"url": "http://localhost:5000/public/api/publiclocations",
 				"method": "POST",
 				"header": [
 					{
@@ -117,7 +117,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"T25\",\n    \"workoutType\": \"CrossTrain\"\n}"
+					"raw": "{\n    \"title\": \"T25\",\n    \"locationType\": \"HustonWoods\"\n}"
 				},
 				"description": ""
 			},
