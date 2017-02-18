@@ -3,9 +3,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.2...HEAD)
+## [Unreleased](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.3...HEAD)
 ### Added
 - TBD.
+
+## [v1.3](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.2...v1.3) - 2017-02-18
+### Added
+- Location Entity
+- Location Repository
+- RESTful web service and return JSON
+- MVC Controller for Location
+- MVC Location Page
+
+### Changed
+- Home Page related to my site
+
 
 ## [v1.2](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.1...v1.2) - 2017-01-28
 ### Added
