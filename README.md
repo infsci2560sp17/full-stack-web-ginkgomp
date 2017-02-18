@@ -23,7 +23,8 @@
 ## Web Site
 
 [YukiAndYuto](https://young-shore-19904.herokuapp.com/)
-![](https://...)
+
+![](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/blob/master/src/main/resources/image/logo.png)
 
 ## Key Features
 
