@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>User Home</title>
+        <title>Pet-friendly Public Locations</title>
+        <link href="../static/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../static/styles/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../static/styles/bootstrap/css/bootstrap-social.css" rel="stylesheet">
+    <link href="../static/styles/main.css" rel="stylesheet">      
     </head>
+    
     <body>
         <h1> Pet-friendly Public Location Lists </h1>
 
-        <div>
-            <table style="border: 1px solid black">
-                <tr>
-                    <th>ID</th>
-                    <th>Location Name</th>
-                    <th>Location Type</th>
-                    <th>Address</th>
-                </tr>
-                <tr data-th-each="location : ${locations}">
-                    <td data-th-text="${location.id}"></td>
-                    <td data-th-text="${location.locationName}"></td>
-                    <td data-th-text="${location.locationType}"></td>
-                    <td data-th-text="${location.address}"></td>
-                </tr>
-            </table>
-        </div>
+        <div class="col-xs-10">
+            <ul class="list-unstyled">
+              <li class="media" data-th-each="location : ${locations}">  
+                  <div class="media-left">
+                   <img src="" alt="Huston Woods">
+                  </div>      
+                  <div class="media-body">
+                      <h5 class="media-heading" data-th-text="${location.locationName}"><small data-th-text="${location.locationType}"></small></h5>
+                    <p data-th-text="${location.address}"></p>
+                  </div>
+              </li>
+            </ul>
+        </div>        
+       
 
         <hr />
         Add Pet-friendly Public Locations:<br />
