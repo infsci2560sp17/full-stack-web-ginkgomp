@@ -18,7 +18,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - CSS styles to Location, Home and Login page
 
 ### Changed
-- Home Page related to my site
+- Home Page link to my location site
 
 
 ## [v1.2](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.1...v1.2) - 2017-01-28
