@@ -1,49 +1,62 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+        
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+        
+          <link type="text/css" href="/styles/main.css" data-th-href="@{/styles/main.css}" rel="stylesheet" /> 
+        
         <title>Pet-friendly Public Locations</title>
-        <link href="../static/styles/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../static/styles/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="../static/styles/bootstrap/css/bootstrap-social.css" rel="stylesheet">
-    <link href="../static/styles/main.css" rel="stylesheet">      
     </head>
     
+    
     <body>
-        <h1> Pet-friendly Public Location Lists </h1>
+        <div class="container">
+            <div class="row">    
+                <h1> Pet-friendly Public Location Lists </h1>
 
-        <div class="col-xs-10">
-            <ul class="list-unstyled">
-              <li class="media" data-th-each="location : ${locations}">  
-                  <div class="media-left">
-                   <img src="" alt="Huston Woods">
-                  </div>      
-                  <div class="media-body">
-                      <h5 class="media-heading" data-th-text="${location.locationName}"><small data-th-text="${location.locationType}"></small></h5>
-                    <p data-th-text="${location.address}"></p>
-                  </div>
-              </li>
-            </ul>
-        </div>        
-       
-
-        <hr />
-        Add Pet-friendly Public Locations:<br />
-        <form data-th-action="@{/locations/add}" name="addLocationForm" method="post">
-            Location Name: <input type="text" name="locationName" /><br />
-            Location Type:<br />
-            <input type="radio" name="locationType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="locationType" value="PublicPark" /> Public Park<br />
-            <input type="radio" name="locationType" value="CoffeeShop" /> Coffee Shop<br />
-            <input type="radio" name="locationType" value="Hotel" /> Hotel<br />
-            <input type="radio" name="locationType" value="Restaurant" /> Restaurant<br />
-            <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
-            Provide Address: <input type="text" name="address" /> <br />
-            <input type="submit" value="Add Location"/><br />
-        </form>
+                <div class="col-xs-12">
+                      <ul class="media-list">  
+                          <li class="media" data-th-each="location : ${locations}">
+                          <div class="media-left">
+                           <img class="media-object img-thumbnail" src="/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" alt="I will add image variable later" width="200px"/>
+                          </div>      
+                          <div class="media-body">
+                              <h3 class="media-heading" data-th-text="${location.locationName}">
+                                  <small data-th-text="${location.locationType}"></small></h3>
+                            <p data-th-text="${location.address}"></p>
+                          </div>
+                          </li>      
+                      </ul>
+                </div>        
+            </div>
 
         <hr />
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+            <div class="row">   
+                <div class="col-xs-12">
+                    Add Pet-friendly Public Locations:<br />
+                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post">
+                        Location Name: <input type="text" name="locationName" /><br />
+                        Location Type:<br />
+                        <input type="radio" name="locationType" value="Unknown" checked="checked" /> Unknown<br />
+                        <input type="radio" name="locationType" value="PublicPark" /> Public Park<br />
+                        <input type="radio" name="locationType" value="CoffeeShop" /> Coffee Shop<br />
+                        <input type="radio" name="locationType" value="Hotel" /> Hotel<br />
+                        <input type="radio" name="locationType" value="Restaurant" /> Restaurant<br />
+                        <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
+                        Provide Address: <input type="text" name="address" /> <br />
+                        <input type="submit" value="Add Location"/><br />
+                    </form>
+
+                    <hr />
+                    <form data-th-action="@{/logout}" method="post">
+                        <input type="submit" value="Sign Out"/>
+                    </form>
+                </div> 
+            </div>
+    </div>
     </body>
 </html>
