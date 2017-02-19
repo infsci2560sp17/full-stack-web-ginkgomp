@@ -1,7 +1,7 @@
 # YukiAndYuto
 
 ## Summary Changes
-  Created a Location entity, a Location Reposity, a REST web service for location and Location Controller. Also, a welcome page, a login page and a page listing pet-friendly locations created.   
+  Created a Location entity, a Location Reposity, a REST web service for location and Location Controller. Also, a welcome page, a login page and a page listing pet-friendly locations created. Using webjars to handle Bootstrap dependency into Maven. For Location page, by using Bootstrap and myself-defined CSS files to add more styles.   
 
 ___
 
