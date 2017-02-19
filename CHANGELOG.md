@@ -14,6 +14,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - RESTful web service and return JSON
 - MVC Controller for Location
 - MVC Location Page
+- Bootstrap Dependency by using webjars 
+- CSS styles to Location page
 
 ### Changed
 - Home Page related to my site
