@@ -36,25 +36,29 @@ public class Location {
     protected String locationName;
     protected LocationType locationType;
     protected String address;
+    protected String description;
+
 
     public Location() {
         this.id = Long.MAX_VALUE;
         this.locationName = null;
         this.locationType = LocationType.Unknown;
         this.address = null;
+        this.description = null;
     }
 
-    public Location(Long id, String locationName, LocationType locationType, String address) {
+    public Location(Long id, String locationName, LocationType locationType, String address, String description) {
       this.id = id;
       this.locationName = locationName;
       this.locationType = locationType;
       this.address = address;
+      this.description = description;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address + " ]";
+        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address +  ",description=" + this.description + " ]";
     }
 
     @Override
@@ -124,6 +128,19 @@ public class Location {
         this.address = address;
     }
 
+    /**
+     * @return the description
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * @param address the address to set
+     */
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
 
 }

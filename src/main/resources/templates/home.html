@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <link data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        
+   
+        
+   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+        
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+    
         
      <title>Welcome page</title>
        
     </head>
  
       
-    <body>
+    <body style="background-color: aliceblue; margin: 20px 20px;">
         <h1>Welcome!</h1>
 
         <p>Click <a data-th-href="@{/locations}">here</a> to see a Pet-friendly public location list!</p>

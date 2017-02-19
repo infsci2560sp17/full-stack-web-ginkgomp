@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+        
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+    
+        
         <title>Spring Security Example </title>
     </head>
-    <body>        
+    <body style="background-color: aliceblue; margin: 20px 20px;"> 
         <div data-th-if="${param.error}">
             Invalid username and password.
         </div>
