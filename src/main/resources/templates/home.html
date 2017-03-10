@@ -25,7 +25,13 @@
 
 
     <body style="background-color: aliceblue; margin: 20px 20px;">
-      <nav>
+        <div class="container">
+            <div class="row">
+        <header class="text-center">
+         <img class="img-fluid" src="../static/image/logo%20-large.png" data-th-src="@{/image/logo%20-large.png}" alt="logo"/>
+        </header>
+            </div>    
+      <nav class="navbar text-center">
          <ul id="navlist">
             <li class="active"><a href="/">Home</a></li>
             <li><a href="/about.html">Photos</a></li>
@@ -36,6 +42,7 @@
             <li><a href="/contact.html">Contact</a></li>
         </ul>
   </nav> 
+        </div>        
        
 
         <p>Click <a data-th-href="@{/locations}">here</a> to see a Pet-friendly public location list!</p>
