@@ -1,0 +1,24 @@
+/* Styles for body */
+body{
+    background-color: aliceblue;
+    margin: 20px 20px;
+}
+
+
+
+.lavalamp-object {
+    background-color:#ccc;
+}
+
+#navlist{
+	margin: 0 0.5em;
+    margin-bottom: 0.5em;
+    border-top: 5px solid #fff;
+		}
+	
+#navlist li{
+    display: inline;
+    padding: 0 1.0em;
+    border-right: 2px solid rgba(250, 250, 250, 0.22);
+    font-size: 1.2em;
+}

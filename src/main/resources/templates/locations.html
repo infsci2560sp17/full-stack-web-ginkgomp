@@ -39,7 +39,7 @@
             <div class="row">   
                 <div class="col-xs-12">
                     Add Pet-friendly Public Locations:<br />
-                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post">
+                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post" enctype="multipart/form-data">
                         Location Name: <input type="text" name="locationName" /><br />
                         Location Type:<br />
                         <input type="radio" name="locationType" value="Unknown" checked="checked" /> Unknown<br />
@@ -50,6 +50,7 @@
                         <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
                         Provide Address: <input type="text" name="address" /> <br />
                         Provide Description: <textarea name="description"></textarea> <br />
+                        Image to upload: <input type="file" name="location" /> <br />
                         <input type="submit" value="Add Location"/><br />
                     </form>
 
@@ -62,3 +63,4 @@
     </div>
     </body>
 </html>
+

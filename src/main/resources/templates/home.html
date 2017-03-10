@@ -2,22 +2,57 @@
 <html>
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome page</title>
+
+   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+
+   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
         
+    <link href="../static/css/main.css" data-th-href="@{css/main.css}" rel="stylesheet" media="screen" />
+    
+   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
+    
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
    
         
-   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{js/lib/jquery.lavalamp.min.js}"></script>
         
-        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
-    
-        
-     <title>Welcome page</title>
-       
-    </head>
  
-      
+        
+    </head>
+
+
     <body style="background-color: aliceblue; margin: 20px 20px;">
-        <h1>Welcome!</h1>
+      <nav>
+         <ul id="navlist">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/about.html">Photos</a></li>
+            <li><a href="/services.html">Videos</a></li>
+            <li><a href="/programs.html">Blog</a></li>
+            <li><a data-th-href="@{/locations}">Ideas</a></li>
+            <li><a href="/programs.html">Friends</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+  </nav> 
+       
 
         <p>Click <a data-th-href="@{/locations}">here</a> to see a Pet-friendly public location list!</p>
+    
+    
+   
+    
+        <script type="text/javascript">
+    $(document).ready(function() {
+
+        $('#navlist').lavalamp({
+    easing: 'easeOutBack',
+    margins:true
+}); 
+    });
+        
+    </script>
+    
     </body>
 </html>
