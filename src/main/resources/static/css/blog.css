@@ -1,0 +1,15 @@
+#blogsidebar{
+    border-left: 2px solid black;
+    padding-left:1.5em;
+}
+
+.breadcrumb :before {
+    color: #ccc;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+.breadcrumb{
+    background: none;
+    font-size: 1.1em;
+}

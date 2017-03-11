@@ -7,15 +7,15 @@
 
    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
         
-    <link href="../static/css/main.css" data-th-href="@{css/main.css}" rel="stylesheet" media="screen" />
+    <link href="../static/css/main.css" data-th-href="@{/css/main.css}" rel="stylesheet" media="screen" />
     
-   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
+   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{/css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
     
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
    
         
-    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{js/lib/jquery.lavalamp.min.js}"></script>
+    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{/js/lib/jquery.lavalamp.min.js}"></script>
         
         
         <title>Pet-friendly Public Locations</title>
@@ -41,14 +41,15 @@
                           </div>
                           </li>      
                       </ul>
-                </div>        
+                </div>  
+                
             </div>
 
         <hr />
             <div class="row">   
                 <div class="col-xs-12">
                     Add Pet-friendly Public Locations:<br />
-                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post" enctype="multipart/form-data">
+                    <form data-th-action="@{/locations/add}" name="addLocationForm" method="post">
                         Location Name: <input type="text" name="locationName" /><br />
                         Location Type:<br />
                         <input type="radio" name="locationType" value="Unknown" checked="checked" /> Unknown<br />

@@ -1,15 +1,24 @@
 package edu.infsci2560;
 
 import edu.infsci2560.models.Location;
+import edu.infsci2560.models.Blog;
 import edu.infsci2560.models.Location.LocationType;
 import edu.infsci2560.repositories.LocationRepository;
+import edu.infsci2560.repositories.BlogRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
+
+
 
 @SpringBootApplication
 public class FullStackWebApplication {
@@ -23,6 +32,13 @@ public class FullStackWebApplication {
         repository.save(new Location(1L, "Huston Woods", LocationType.NaturalAttractions,"Oxford, OH","A good Natural Park that allow pets" ));
         repository.save(new Location(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA", "A public park in Urban Pittsburgh, allow pets."));
         repository.save(new Location(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA","A hotel which is pet-friendly, try to spend a great time with your dogs here! "));
+    
+        
+        BlogRepository repositoryb = ctx.getBean(BlogRepository.class);
+        repositoryb.save(new Blog(1L,"Blog#1","Author1","xxxxxxxx"));
+        repositoryb.save(new Blog(2L,"Blog#2","Author1","xxxxxxxx"));
+        
+        
     }
 
 
@@ -73,4 +89,6 @@ public class FullStackWebApplication {
 //            }
 //        };
 //    }
+    
+    
 }
