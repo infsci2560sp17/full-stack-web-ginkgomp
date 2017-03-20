@@ -1,7 +1,7 @@
 /* Styles for body */
 body{
-    background-color: aliceblue;
-    margin: 20px 20px;
+    background-color: aliceblue !important;
+    margin: 20px 20px !important;
 }
 
 
@@ -11,9 +11,9 @@ body{
 }
 
 #navlist{
-	margin: 0 0.5em;
-    margin-bottom: 0.5em;
-    border-top: 5px solid #fff;
+	margin: 0 0.5em !important;
+    margin-bottom: 0.5em !important;
+    border-top: 5px solid #fff !important;
 		}
 	
 #navlist li{
@@ -23,3 +23,13 @@ body{
     font-size: 1.4em;
 }
 
+.breadcrumb :before {
+    color: #ccc;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+.breadcrumb{
+    background: none;
+    font-size: 1.1em;
+}

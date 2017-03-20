@@ -1,0 +1,69 @@
+<html>
+<div class='flash' data-th-fragment="header">
+                <!-- timeline -->
+              <button class='yselect' id='yprev'>-</button>
+              <p class='currentYear'>0</p>
+              <button class='yselect' id='ynext'>></button>
+              <div class='dateRight'>
+                <p class='currentDate'>0</p>
+              </div>
+              <div id='timelineWrap'>
+                <div class='months'>
+                  <div class='monthLine firstlast' style="left: 0px"></div>
+                  <div class='monthLine' style="left: 70.833px"></div>
+                  <div class='monthLine' style="left: 140.666px"></div>
+                  <div class='monthLine' style="left: 210.999px"></div>
+                  <div class='monthLine' style="left: 281.332px"></div>
+                  <div class='monthLine' style="left: 351.665px"></div>
+                  <div class='monthLine' style="left: 421.998px"></div>
+                  <div class='monthLine' style="left: 492.331px"></div>
+                  <div class='monthLine' style="left: 562.664px"></div>
+                  <div class='monthLine' style="left: 632.997px"></div>
+                  <div class='monthLine' style="left: 703.33px"></div>
+                  <div class='monthLine' style="left: 773.663px"></div>
+                  <div class='monthLine firstlast' style="left: 849px"></div>
+                </div>
+              </div>
+                <!-- timeline content -->
+              <div id="contentWrap">  
+                    <div class="row">  
+                        <div class="col-xs-1">
+                          <div class='dbuttons'>
+                            <button class='dselect' id='dprev'>-</button>
+                          </div>
+                        </div>
+                        <div class="col-xs-10 row" data-th-each="event :${events}">   
+                            <div class="tlcontainer" data-date="2015-03-07">
+                                <div class="col-xs-4">
+                                 <img src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" class="image" alt="" width="200" />
+                                </div>
+                                <div class="col-xs-8">
+                                  <p class="eventTitle" data-th-text="${event.eventTitle}"></p><br/>
+                                  <h5 class="eventDate" data-th-text="${event.eventDate}"></h5>
+                                  <p class="eventContent" data-th-text="${event.eventContent}"></p>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="col-xs-1">
+                          <div class='dbuttons'>
+                            <button class ='dselect' id='dnext'>></button>
+                          </div>
+                        </div>
+                   </div>              
+              </div>
+    </div>
+<script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+<script src="../static/js/lib/jquery-ui.min.js" data-th-src="@{/js/lib/jquery-ui.min.js}"></script> 
+<script src="../static/js/lib/simple-timeline.jquery.js" data-th-src="@{/js/lib/simple-timeline.jquery.js}"></script> 
+<script>
+ 
+    
+  $('div.tlcontainer').simpleTimeline();
+    
+  
+
+  
+</script>
+
+</html>

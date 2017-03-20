@@ -11,13 +11,13 @@
 
     <link href="../static/css/blog.css" data-th-href="@{/css/blog.css}" rel="stylesheet" media="screen" />
 
-   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{/css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
+   
 
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
 
 
-    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{/js/lib/jquery.lavalamp.min.js}"></script>
+
 
 
         <title>Blogs</title>
@@ -25,24 +25,7 @@
 
 
     <body>
-          <div class="container">
-            <div class="row">
-        <header class="text-center">
-         <img class="img-fluid" src="../static/image/logo%20-large.png" data-th-src="@{/image/logo%20-large.png}" alt="logo"/>
-        </header>
-            </div>
-      <nav class="navbar text-center">
-         <ul id="navlist">
-            <li><a href="/">Home</a></li>
-            <li><a href="">Photos</a></li>
-            <li><a href="">Videos</a></li>
-            <li class="active"><a data-th-href="@{/blogs}">Blog</a></li>
-            <li><a data-th-href="@{/locations}">Ideas</a></li>
-            <li><a href="">Friends</a></li>
-            <li><a href="">Contact</a></li>
-        </ul>
-  </nav>
-        </div>
+         <div data-th-replace="header :: html"></div>
         <div class="container">
             <div class="row">
 
@@ -55,29 +38,21 @@
                       <h2>add sth later</h2>
                 </div>
 
-        
                 <div class="col-xs-10" id="blogsidebar">
-                <li data-th-each="blog :${blogs}">
+                    <li data-th-each="blog :${blogs}">
                     <h2 data-th-text="${blog.title}"></h2>
-                <p class="lead" data-th-text="${blog.author}"> By</p>
+                <p class="lead" data-th-text="${blog.author}"></p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
                 <hr/>
-                <img class="img-responsive" src="../static/image/Hueston_Woods_Dog_Camping.jpg" width="500" alt="" />
+                <img class="img-responsive" src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" width="500" alt="" />
                 <hr/>
                 <p data-th-text="${blog.content}"></p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr/>
-                </li>
+                    </li>
                 </div>
-            
-            </div>  
-                
-            
-            
-
-                
-        
+            </div>
           <hr />
              <div class="row">
                 <div class="col-xs-12">
@@ -88,7 +63,7 @@
                         <label for="author">Author:</label>
                         <input type="text" name="author" /> <br />
                         <label for="content">Content:</label>
-                       <textarea name="content"></textarea> <br />
+                       <textarea name="description"></textarea> <br />
                         <!--
                         Image to upload: <input type="file" name="location" /> <br />
                         -->
@@ -102,6 +77,7 @@
                 </div>
             </div>
       </div>
-               
+        
+        
     </body>
 </html>

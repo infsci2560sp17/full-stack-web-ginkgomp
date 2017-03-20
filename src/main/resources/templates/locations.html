@@ -8,14 +8,13 @@
    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
         
     <link href="../static/css/main.css" data-th-href="@{/css/main.css}" rel="stylesheet" media="screen" />
-    
-   <link href="../static/css/jquery.lavalamp.css" data-th-href="@{/css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
-    
+    <link href="../static/css/blog.css" data-th-href="@{/css/blog.css}" rel="stylesheet" media="screen" />
+   
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
    
         
-    <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{/js/lib/jquery.lavalamp.min.js}"></script>
+    
         
         
         <title>Pet-friendly Public Locations</title>
@@ -23,8 +22,14 @@
     
     
     <body>
+        <div data-th-replace="header :: html"></div>
         <div class="container">
-            <div class="row">    
+            <div class="row">  
+                 <nav class="breadcrumb">
+                  <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
+                  <span class="breadcrumb-item active">Ideas</span>
+                </nav>
+                
                 <h1> Pet-friendly Public Location Lists </h1>
 
                 <div class="col-xs-12">
@@ -71,6 +76,7 @@
                 </div> 
             </div>
     </div>
+   
     </body>
 </html>
 
