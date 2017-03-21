@@ -10,8 +10,7 @@
 
    <link href="../static/css/jquery.lavalamp.css" data-th-href="@{css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
 
-    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
-            data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+    <script src="../static/js/lib/jquery.min.js" data-th-src="@{js/lib/jquery.min.js}"></script>
 
 
     <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{js/lib/jquery.lavalamp.min.js}"></script>
@@ -59,8 +58,8 @@ $('#navlist li a').filter(function() {
     
 
 
-        <script type="text/javascript">
-    $(document).ready(function() {
+    <script type="text/javascript">
+    $(document).ready(function( $ ) {
 
         $('#navlist').lavalamp({
     easing: 'easeOutBack',

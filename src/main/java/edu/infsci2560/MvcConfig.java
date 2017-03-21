@@ -11,6 +11,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+import edu.infsci2560.models.Event;
+
 
 
 
@@ -49,6 +51,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     public MultipartResolver multipartResolver() {
         return new StandardServletMultipartResolver();
     }
+    
+    
 
 
 }
