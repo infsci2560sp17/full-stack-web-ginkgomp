@@ -3,9 +3,35 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [Unreleased](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.3...HEAD)
+## [Unreleased](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.4...HEAD)
 ### Added
 - TBD.
+
+## [v1.4](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.3...v1.4)
+### Added
+- Friend Entity
+- Friend Respository
+- RESTful web service (GET, POST, PUT, DELETE) for friends and return JSON
+- Friend Controller
+- Friends view page
+- Blog Entity
+- Blog Respository
+- RESTful web service (GET, POST) for blogs and return JSON
+- Blog Controller
+- Blogs view page
+- Event Entity
+- Event Respository
+- RESTful web service (GET, POST) for photos and return JSON
+- Event Controller
+- Photos view page
+- More CSS, Bootstrap styles 
+- Javascript, jQuery scripts for view pages
+- fontAwesome icons for home page 
+- Account view page 
+
+### Changed
+- Home Page Layout
+
 
 ## [v1.3](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.2...v1.3) - 2017-02-18
 ### Added
