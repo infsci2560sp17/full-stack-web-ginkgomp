@@ -45,7 +45,10 @@ TODO : Please list key features of your project.
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+When Visitors type my heroku application address to browser, this landing page will as a home page first show to visitors.
+This landing page include the navigation bar with each sessions/features provided in my site and there is a slide show which attracts people's eyes. At the bottom of the page, there are two sessions, one with some new updates available on the site now and the other session includes some social media icons. 
+![](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/blob/master/landingpage.jpeg)
+
 
 ### User Input Form
 
