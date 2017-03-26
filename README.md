@@ -37,9 +37,9 @@ ___
 
 TODO : Please list key features of your project.
 
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
+* User login 
+* User Account page
+* Upload images
 
 ## Project Details
 
@@ -60,16 +60,17 @@ TODO : please provide a description of at least 1 API including a sample of requ
 
 ### API Method 1
 
-    POST photos/:id/tags
+    GET friends/:id
 
 #### Parameters
 
-- **id** _(required)_ — The Photo ID to add tags for.
-- **tags** _(required)_ — Comma separated tags.
+- **id** _(required)_ — The friends ID to get an specifc friend.
+
 
 #### Response
 
-A JSON or XMLobject containing the PhotoID and list of tags accepted.
+A JSON or XMLobject containing the Friend ID and list of tags accepted.
+
 
 #### Errors
 
@@ -79,9 +80,11 @@ All known errors cause the resource to return HTTP error code header together wi
 
 #### Example
 
+Get one friend with id provided
+
 ##### Request
 
-    POST /v1/photos/123456/tags
+    GET /friends/16
 
 ##### Body
 
@@ -90,25 +93,20 @@ All known errors cause the resource to return HTTP error code header together wi
 
 ##### JSON Response
 
-```json
+json
 {
-    "photoId": 123456,
-    "tags": ["cute", "puppy"]
+    "id":16,
+    "petName":"Kiki",
+    "petBreed":"Samoyed",
+    "petAge":3
 }
-```
+
+
+
 
 ##### XML Response
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<PhotoTags>
-    <photoId>123456</PhotoId>
-        <tags>
-            <tag>cute</tag>
-            <tag>puppy</tag>
-        </tags>
-</PhotoTags>
-```
+N/A
 
 ## Technologies Used
 
@@ -117,3 +115,4 @@ TODO : List all technologies used in your project
 - [Spring Boot](https://projects.spring.io/spring-boot/) - Takes an opinionated view of building production-ready Spring applications.
 - [Thymleaf](http://www.thymeleaf.org/) - Thymeleaf is a modern server-side Java template engine for both web and standalone environments.
 - [Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool.
+- [Bootstrap](http://getbootstrap.com/) - the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
