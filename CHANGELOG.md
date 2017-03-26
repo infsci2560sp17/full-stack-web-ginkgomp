@@ -7,7 +7,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - TBD.
 
-## [v1.4](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.3...v1.4)
+## [v1.4](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.3...v1.4) - 2017-03-25
 ### Added
 - Friend Entity
 - Friend Respository
