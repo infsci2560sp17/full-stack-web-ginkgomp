@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../static/css/4.0.0-alpha.6/css/bootstrap.min.css" data-th-href="@{/css/4.0.0-alpha.6/css/bootstrap.min.css}" />
 
       <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
 
@@ -27,13 +28,13 @@
     <body>
          <div data-th-replace="header :: html"></div>
         <div class="container">
-            <div class="row">
+            
 
                 <nav class="breadcrumb">
                   <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
                   <span class="breadcrumb-item active">Blog</span>
                 </nav>
-
+            <div class="row">
                 <div class="col-xs-2">
                       <h2>add sth later</h2>
                 </div>
@@ -69,15 +70,21 @@
                         -->
                         <input type="submit" value="New Post"/><br />
                     </form>
-
-                    <hr />
                     <form data-th-action="@{/logout}" method="post">
                         <input type="submit" value="Sign Out"/>
                     </form>
+                    <hr />
+                    <br/>
                 </div>
             </div>
-      </div>
+            
+     <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
+          <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
+        </footer>
+         </div>
         
+       
         
     </body>
+    
 </html>

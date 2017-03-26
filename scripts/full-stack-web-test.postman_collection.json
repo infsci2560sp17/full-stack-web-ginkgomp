@@ -122,6 +122,42 @@
 				"description": ""
 			},
 			"response": []
+		},
+        {
+			"name": "Get Blog",
+			"request": {
+				"url": "http://localhost:5000/public/api/blogs",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Blog",
+			"request": {
+				"url": "http://localhost:5000/public/api/blogs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "X-CSRF-TOKEN",
+						"value": "{{_csrf}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Blog1\",\n    \"Author\": \"Author1\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
 		}
 	]
 }

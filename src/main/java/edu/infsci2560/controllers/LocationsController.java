@@ -7,17 +7,23 @@ package edu.infsci2560.controllers;
 
 import edu.infsci2560.models.Location;
 import edu.infsci2560.repositories.LocationRepository;
+
+import java.io.IOException;
+
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -40,4 +46,21 @@ public class LocationsController {
         return new ModelAndView("locations", "locations", repository.findAll());
     }
 
+    @RequestMapping(value = "locations/{id}", method = RequestMethod.DELETE)
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public ModelAndView delete(@PathVariable("id") long id) {
+		repository.delete(id);
+		return new ModelAndView("locations", "locations", repository.findAll());
+	}
+    
+    @RequestMapping(value = "locations/{id}", method = RequestMethod.PUT, consumes = "application/json")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	@Transactional
+	public ModelAndView update(@RequestBody Location location, @PathVariable("id") long id) throws IOException {
+		if (id != location.getId()) {
+			repository.delete(id);
+		}
+		repository.save(location);
+		return new ModelAndView("locations", "locations", repository.findAll());
+	}
 }

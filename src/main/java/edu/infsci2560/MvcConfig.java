@@ -31,7 +31,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/login").setViewName("login");
         registry.addViewController("/events").setViewName("events");
         registry.addViewController("/header").setViewName("header");
-
+        registry.addViewController("/files").setViewName("uploadForm");
     }
 
 
@@ -47,11 +47,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 
 
 
-    @Bean
-    public MultipartResolver multipartResolver() {
-        return new StandardServletMultipartResolver();
-    }
-    
+ 
     
 
 

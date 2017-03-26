@@ -51,4 +51,18 @@ public class LocationsService {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.save(locations), headers, HttpStatus.OK);
     }
+    
+    @RequestMapping(method = RequestMethod.PUT, consumes="application/json", produces = "application/json")
+    public ResponseEntity<Location> update(@RequestBody Location locations, @PathVariable("id") long id) {
+        HttpHeaders headers = new HttpHeaders();
+        return new ResponseEntity<>(repository.save(locations), headers, HttpStatus.OK);
+    }
+    
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    public ResponseEntity<Location> delete(@PathVariable("id") Long id) {
+        HttpHeaders headers = new HttpHeaders();
+        return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
+    }
+    
+    
 }

@@ -29,7 +29,7 @@
                   <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
                   <span class="breadcrumb-item active">Ideas</span>
                 </nav>
-                
+                <br/>
                 <h1> Pet-friendly Public Location Lists </h1>
 
                 <div class="col-xs-12">
@@ -65,18 +65,44 @@
                         <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
                         Provide Address: <input type="text" name="address" /> <br />
                         Provide Description: <textarea name="description"></textarea> <br />
+                        <!--
                         Image to upload: <input type="file" name="location" /> <br />
+                        -->
                         <input type="submit" value="Add Location"/><br />
                     </form>
-
+                     <hr />
+                    
+                      <h2>Delete a location:</h2>
+                      <form data-th-action="@{/locations/delete}" name="deleteLocationForm" method="delete">
+                         id for delete: <input type="text" name="id" /><br /> 
+                       <input type="submit" value="Delete"/>
+                      </form>
+                    
                     <hr />
+                      <h2>Update a location:</h2>
+                        <form data-th-action="@{/locations/put}" name="updateLocationForm" method="put">
+                         id for update: <input type="text" name="id" /><br /> 
+                         Location Name: <input type="text" name="locationName" /><br />
+                       <input type="submit" value="Update"/>
+                      </form>
+                    <!--
+                   
+                        <a data-th-href="@{/files}">Upload a File</a>
+                    
+                    -->
+                    <hr />
+
                     <form data-th-action="@{/logout}" method="post">
                         <input type="submit" value="Sign Out"/>
                     </form>
+                    <hr />
+                    <br/>
                 </div> 
             </div>
+            
     </div>
    
     </body>
+   
 </html>
 

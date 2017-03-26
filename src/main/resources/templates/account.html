@@ -1,13 +1,94 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello World!</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../static/css/4.0.0-alpha.6/css/bootstrap.min.css" data-th-href="@{/css/4.0.0-alpha.6/css/bootstrap.min.css}" />
+        
+        
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+
+        <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+    
+        <link href="../static/css/main.css" data-th-href="@{/css/main.css}" rel="stylesheet" media="screen" />
+        <link href="../static/css/account.css" data-th-href="@{/css/account.css}" rel="stylesheet" media="screen" />
+        
+        
+        <title>Account</title>
     </head>
     <body>
-        <h1 data-th-inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
-        <form data-th-action="@{/logout}" method="post">
-            <input type="submit" value="Sign Out"/>
-        </form>
+        <div data-th-replace="header :: html"></div>
+         <div class="container">
+            
+             <h2 data-th-inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h2>
+           
+
+           <div class="row">
+            <div class="col-xs-3">
+               <div class="card" style="width: 20rem;">
+                <img class="card-img-top" src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" width="200" alt="username" />
+                <div class="card-block">
+                  <h4 class="card-title"> User name </h4>
+                   <small class="card-text"> User self intro</small>            
+                </div>  
+                <div class="list-group list-group-flush">
+                  <button class="list-group-item button btn btn-outline-primary btn-sm" type="submit">Follow</button>   
+                  <button class="list-group-item button btn btn-outline-primary btn-sm" type="submit">Like</button>
+                  <button class="list-group-item button btn btn-outline-primary btn-sm" type="submit">message</button>
+                </div>   
+                 
+               </div>
+            </div> 
+               
+            <div class="col-xs-8 offset-md-1" >
+               
+                    <form style="border: 1px solid #517153; padding: 5px 5px">
+                     <fieldset>
+                      <legend>View your posts:<button type="submit" value="Add" class="btn btn-sm btn-success pull-right" style="padding-bottom: 2px">Create New Posts</button></legend>
+                         
+                         <a class="" href="">Post #1's title</a>
+                         <small>Post Date</small>
+                         <button type="submit" value="Delete" class="btn btn-sm btn-outline-success pull-right">Delete</button>
+                         <button type="submit" value="Edit" class="btn btn-sm btn-outline-success pull-right">Edit</button>
+                         <button type="submit" value="Read" class="btn btn-sm btn-outline-success pull-right">Read</button>
+                     </fieldset>
+                    </form>
+                    <br /><br />
+                    <form style="border: 1px solid #517153; padding: 5px 5px">
+                        <fieldset>
+                            <legend>View your submitted queries:</legend>
+                             <p>Query title</p>
+                             <p>Response</p>
+                        </fieldset>
+                    
+                    </form>
+                    <br /><br />
+                    <form style="border: 1px solid #517153; padding: 5px 5px">
+                        <fieldset>
+                            <legend>View your received messages:</legend>
+                            <blockquote class="blockquote">
+                              <p class="mb-0">I love your posts!</p>
+                                <footer class="blockquote-footer"><a href="">Sender's name</a> in <cite title="Source Title">Msg Date</cite></footer>
+                            </blockquote>
+                            
+                        </fieldset>
+                    
+                    </form>
+               <hr />
+                    <br/>
+            </div>   
+               
+        
+           </div>
+             <!--
+          <form data-th-action="@{/logout}" method="post">
+                <input type="submit" value="Sign Out"/>
+            </form>
+            -->
+        </div>
+        
+        <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
+          <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
+        </footer>
         
     </body>
 </html>
