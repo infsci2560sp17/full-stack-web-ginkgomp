@@ -47,12 +47,15 @@ TODO : Please list key features of your project.
 
 When Visitors type my heroku application address to browser, this landing page will as a home page first show to visitors.
 This landing page include the navigation bar with each sessions/features provided in my site and there is a slide show which attracts people's eyes. At the bottom of the page, there are two sessions, one with some new updates available on the site now and the other session includes some social media icons. 
+
 ![](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/blob/master/landingpage.jpeg)
 
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+When authorized users log in, they can add their favorite pet-friendly locations on the 'idea' page, by providing locaition name, location address, locaiton type and a short description of location. 
+
+![](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/blob/master/input%20form.jpeg)
 
 ## API
 
