@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -65,6 +66,29 @@
                         -->
                         <input type="submit" value="Add new friend"/><br />
                     </form>
+                    
+                    <hr />
+                    
+                    <p>Delete a friend:</p>
+                    <form data-th-action="@{/friends/delete}" name="deleteFriendForm" method="delete">
+                    pet id: <input type="text" name="id" /><br /> 
+                    <input type="submit" value="Delete a Friend"/>
+                    </form>
+                    
+                    <p>Update a friend:</p>
+                    <form data-th-action="@{/friends/update}" name="updateFriendForm" method="update">
+                    pet id: <input type="text" name="id" /><br /> 
+                    <label for="petName">Name:</label>
+                    <input type="text" name="petName" /><br />
+                    <label for="petBreed">Breed:</label>
+                    <input type="text" name="petBreed" /> <br />
+                    <label for="petAge">Age:</label>
+                    <input type="text" name="petAge" /> <br />
+                    <input type="submit" value="Update a Friend"/>
+                    
+                    </form>
+               
+                    
                     <form data-th-action="@{/logout}" method="post">
                         <input type="submit" value="Sign Out"/>
                     </form>
