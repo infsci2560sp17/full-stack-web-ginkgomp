@@ -6,10 +6,16 @@
 package edu.infsci2560.repositories;
 
 import edu.infsci2560.models.Location;
+
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
  *
  * @author Wenwen Sun
  */
-public interface LocationRepository extends PagingAndSortingRepository<Location, Long> {}
+public interface LocationRepository extends CrudRepository<Location, Long> {
+	
+	
+	
+}

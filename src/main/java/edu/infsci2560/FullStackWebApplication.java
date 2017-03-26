@@ -3,10 +3,12 @@ package edu.infsci2560;
 import edu.infsci2560.models.Location;
 import edu.infsci2560.models.Blog;
 import edu.infsci2560.models.Event;
+import edu.infsci2560.models.Friend;
 import edu.infsci2560.models.Location.LocationType;
 import edu.infsci2560.repositories.LocationRepository;
 import edu.infsci2560.repositories.BlogRepository;
 import edu.infsci2560.repositories.EventRepository;
+import edu.infsci2560.repositories.FriendRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,6 +50,11 @@ public class FullStackWebApplication {
         repositorye.save(new Event(2L,"Move to Pittsburgh","2016-08-09","We move to pittsburgh for school they move to pittsburgh for fun"));
         repositorye.save(new Event(3L,"Two Years Old","2017-03-07","They turn to two while are as cute as the little puppies first brought into our family"));
         		
+        FriendRepository repositoryf = ctx.getBean(FriendRepository.class);
+        repositoryf.save(new Friend(1L,"Genki","Husky",3));
+        repositoryf.save(new Friend(2L,"Kiki","Samoyed",3));
+        
+        
         
     }
 

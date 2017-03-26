@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="../static/css/4.0.0-alpha.6/css/bootstrap.min.css" data-th-href="@{/css/4.0.0-alpha.6/css/bootstrap.min.css}" />
+
+      <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
+
+   <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
+
+    <link href="../static/css/main.css" data-th-href="@{/css/main.css}" rel="stylesheet" media="screen" />
+
+    
+   
+
+    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+            data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+
+
+
+
+        <title>Friends</title>
+    </head>
+
+
+    <body>
+         <div data-th-replace="header :: html"></div>
+        <div class="container">
+            
+
+                <nav class="breadcrumb">
+                  <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
+                  <span class="breadcrumb-item active">Friends</span>
+                </nav>
+            
+                 <table style="border: 1px solid black">
+                <tr>
+                    <th>ID</th>
+                    <th>pet name</th>
+                    <th>pet breed</th>
+                    <th>pet age</th>
+                </tr>                
+                <tr data-th-each="friend : ${friends}">
+                    <td data-th-text="${friend.id}"></td>
+                    <td data-th-text="${friend.petName}"></td>
+                    <td data-th-text="${friend.petBreed}"></td>
+                    <td data-th-text="${friend.petAge}"></td>
+                </tr>
+            </table>
+            
+          <hr />
+             <div class="row">
+                <div class="col-xs-12">
+                    Add a new friend:<br />
+                    <form data-th-action="@{/friends/add}" name="addFriendForm" method="post">
+                        <label for="petName">Name:</label>
+                         <input type="text" name="petName" /><br />
+                        <label for="petBreed">Breed:</label>
+                        <input type="text" name="petBreed" /> <br />
+                        <label for="petAge">Age:</label>
+                       <input type="text" name="petAge" /> <br />
+                        <!--
+                        Image to upload: <input type="file" name="location" /> <br />
+                        -->
+                        <input type="submit" value="Add new friend"/><br />
+                    </form>
+                    <form data-th-action="@{/logout}" method="post">
+                        <input type="submit" value="Sign Out"/>
+                    </form>
+                    <hr />
+                    <br/>
+                </div>
+            </div>
+            
+     <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
+          <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
+        </footer>
+         </div>
+        
+       
+        
+    </body>
+    
+</html>
