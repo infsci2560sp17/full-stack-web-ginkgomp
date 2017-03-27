@@ -39,7 +39,9 @@ TODO : Please list key features of your project.
 
 * User login 
 * User Account page
-* Upload images
+* Upload files
+* Growth timeline display 
+* REST web service 
 
 ## Project Details
 
@@ -119,3 +121,5 @@ TODO : List all technologies used in your project
 - [Thymleaf](http://www.thymeleaf.org/) - Thymeleaf is a modern server-side Java template engine for both web and standalone environments.
 - [Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool.
 - [Bootstrap](http://getbootstrap.com/) - the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+- [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit
+- [jQuery Plugin] (https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library. 
