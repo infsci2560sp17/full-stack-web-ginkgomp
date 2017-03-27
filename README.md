@@ -122,4 +122,4 @@ TODO : List all technologies used in your project
 - [Maven](https://maven.apache.org/) - Apache Maven is a software project management and comprehension tool.
 - [Bootstrap](http://getbootstrap.com/) - the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
 - [Font Awesome](http://fontawesome.io/) - The iconic font and CSS toolkit
-- [jQuery Plugin] (https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library. 
+- [jQuery Plugin](https://jquery.com/) - jQuery is a fast, small, and feature-rich JavaScript library. 
