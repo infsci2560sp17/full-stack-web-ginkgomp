@@ -30,14 +30,14 @@ public class FullStackWebApplication {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
         LocationRepository repository = ctx.getBean(LocationRepository.class);
-        repository.save(new Location(1L, "Huston Woods", LocationType.NaturalAttractions,"Oxford, OH","A good Natural Park that allow pets" ));
-        repository.save(new Location(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA", "A public park in Urban Pittsburgh, allow pets."));
-        repository.save(new Location(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA","A hotel which is pet-friendly, try to spend a great time with your dogs here! "));
+        repository.save(new Location(1L, "Huston Woods", LocationType.NaturalAttractions,"Oxford, OH","A good Natural Park that allow pets","http://www.markschupp.com/AccountData/150109499/147064800.jpg"));
+        repository.save(new Location(2L, "Frick Park", LocationType.PublicPark,"Pittsburgh, PA", "A public park in Urban Pittsburgh, allow pets.","http://cdn.onlyinyourstate.com/wp-content/uploads/2016/05/1-Frick-Park.jpg"));
+        repository.save(new Location(3L, "Hampton Inn", LocationType.Hotel,"Pittsburgh, PA","A hotel which is pet-friendly, try to spend a great time with your dogs here! ","https://images.bringfido.com/site_media/photos/2015/06/17/6_caenwPETS-2014.jpg"));
     
         
         BlogRepository repositoryb = ctx.getBean(BlogRepository.class);
-        repositoryb.save(new Blog(1L,"Blog#1","Author1","xxxxxxxx"));
-        repositoryb.save(new Blog(2L,"Blog#2","Author1","xxxxxxxx"));
+        repositoryb.save(new Blog(1L,"Blog#1","Author1","xxxxxxxx","http://oi63.tinypic.com/63uc1j.jpg"));
+        repositoryb.save(new Blog(2L,"Blog#2","Author1","xxxxxxxx","http://oi68.tinypic.com/10nyxya.jpg"));
         
         EventRepository repositorye = ctx.getBean(EventRepository.class);
         repositorye.save(new Event(1L,"Yuki's Birth","2015-03-07","On March 7th, 2015, our little angel (sometimes can be an evil) -- Yuki was born."));
@@ -51,8 +51,8 @@ public class FullStackWebApplication {
         repositorye.save(new Event(3L,"Two Years Old","2017-03-07","They turn to two while are as cute as the little puppies first brought into our family"));
         		
         FriendRepository repositoryf = ctx.getBean(FriendRepository.class);
-        repositoryf.save(new Friend(1L,"Genki","Husky",3));
-        repositoryf.save(new Friend(2L,"Kiki","Samoyed",3));
+        repositoryf.save(new Friend(1L,"Genki","Husky","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
+        repositoryf.save(new Friend(2L,"Kiki","Samoyed","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));
         
         
         

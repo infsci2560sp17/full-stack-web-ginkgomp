@@ -10,7 +10,8 @@
    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
 
     <link href="../static/css/main.css" data-th-href="@{/css/main.css}" rel="stylesheet" media="screen" />
-
+    
+        
     
    
 
@@ -41,12 +42,15 @@
                     <th>pet name</th>
                     <th>pet breed</th>
                     <th>pet age</th>
+                    <th>Images</th>
                 </tr>                
                 <tr data-th-each="friend : ${friends}">
                     <td data-th-text="${friend.id}"></td>
                     <td data-th-text="${friend.petName}"></td>
                     <td data-th-text="${friend.petBreed}"></td>
                     <td data-th-text="${friend.petAge}"></td>
+                    <td><img class="img-responsive img-rounded" data-th-src="${friend.imageName}" width="100px"/></td>
+                    <td><a href="#" data-th-href="@{/friends/update/{id}(id=${friend.id})}">Edit</a></td>
                 </tr>
             </table>
             
@@ -61,32 +65,24 @@
                         <input type="text" name="petBreed" /> <br />
                         <label for="petAge">Age:</label>
                        <input type="text" name="petAge" /> <br />
-                        <!--
-                        Image to upload: <input type="file" name="location" /> <br />
-                        -->
+                        <label for="imageName"> Image Url:</label>
+                       <input type="url" name="imageName" placeholder="http://"/> <br />
+                        
                         <input type="submit" value="Add new friend"/><br />
                     </form>
                     
                     <hr />
                     
+                    <a data-th-href="@{/files}">Upload a File</a>
+                    
+                    <br /> 
                     <p>Delete a friend:</p>
                     <form data-th-action="@{/friends/delete}" name="deleteFriendForm" method="delete">
                     pet id: <input type="text" name="id" /><br /> 
                     <input type="submit" value="Delete a Friend"/>
                     </form>
                     
-                    <p>Update a friend:</p>
-                    <form data-th-action="@{/friends/update}" name="updateFriendForm" method="update">
-                    pet id: <input type="text" name="id" /><br /> 
-                    <label for="petName">Name:</label>
-                    <input type="text" name="petName" /><br />
-                    <label for="petBreed">Breed:</label>
-                    <input type="text" name="petBreed" /> <br />
-                    <label for="petAge">Age:</label>
-                    <input type="text" name="petAge" /> <br />
-                    <input type="submit" value="Update a Friend"/>
-                    
-                    </form>
+                
                
                     
                     <form data-th-action="@{/logout}" method="post">

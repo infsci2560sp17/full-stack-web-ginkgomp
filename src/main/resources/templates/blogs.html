@@ -41,11 +41,11 @@
 
                 <div class="col-xs-10" id="blogsidebar">
                     <li data-th-each="blog :${blogs}">
-                    <h2 data-th-text="${blog.title}"></h2>
+                    <h2 data-th-text="${blog.title}" style="display:inline-block"></h2> <small data-th-text="${blog.id}"></small>
                 <p class="lead" data-th-text="${blog.author}"></p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
                 <hr/>
-                <img class="img-responsive" src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" width="500" alt="" />
+                <img class="img-responsive" data-th-src="${blog.imageName}" width="500" data-th-alt="${blog.title}" />
                 <hr/>
                 <p data-th-text="${blog.content}"></p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -65,11 +65,25 @@
                         <input type="text" name="author" /> <br />
                         <label for="content">Content:</label>
                        <textarea name="description"></textarea> <br />
-                        <!--
-                        Image to upload: <input type="file" name="location" /> <br />
-                        -->
+                        <label for="imageName"> Image Url:</label>
+                       <input type="url" name="imageName" placeholder="http://"/> <br />
+                        
                         <input type="submit" value="New Post"/><br />
                     </form>
+                    
+                    <hr />
+                    
+                    <a data-th-href="@{/files}">Upload a File</a>
+                    
+                    <br /> 
+                    
+                    <h2>Delete a Post:</h2>
+                      <form data-th-action="@{/blogs/delete}" name="deleteBlogForm" method="delete">
+                         id for delete: <input type="text" name="id" /><br /> 
+                       <input type="submit" value="Delete"/>
+                      </form>
+                    
+                    
                     <form data-th-action="@{/logout}" method="post">
                         <input type="submit" value="Sign Out"/>
                     </form>

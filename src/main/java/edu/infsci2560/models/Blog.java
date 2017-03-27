@@ -22,6 +22,7 @@ public class Blog {
     protected String title;
     protected String author;
     protected String content;
+    protected String imageName;
 
 
     public Blog() {
@@ -29,19 +30,21 @@ public class Blog {
         this.title = null;
         this.author = null;
         this.content = null;
+        this.imageName = null;
     }
 
-    public Blog(Long id, String title, String author, String content) {
+    public Blog(Long id, String title, String author, String content, String imageName) {
       this.id = id;
       this.title = title;
       this.author = author;
       this.content = content;
+      this.imageName = imageName;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", author=" + this.author +  ", content=" + this.content + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", author=" + this.author +  ", content=" + this.content + ", imageName=" + this.imageName + " ]";
        
     }
 
@@ -112,4 +115,11 @@ public class Blog {
         this.content = content;
     }
 
+    public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
  }

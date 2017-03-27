@@ -36,10 +36,10 @@
                       <ul class="media-list">  
                           <li class="media" data-th-each="location : ${locations}">
                           <div class="media-left">
-                           <img class="media-object img-thumbnail" src="/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" alt="I will add image variable later" width="200px"/>
+                           <img class="media-object img-thumbnail" data-th-src="${location.imageName}" alt="${location.locationName}" width="200px"/>
                           </div>      
                           <div class="media-body">
-                              <h3 class="media-heading" data-th-text="${location.locationName}"></h3>
+                              <h3 class="media-heading" data-th-text="${location.locationName}" style="display:inline-block"></h3> <small data-th-text="${location.id}"></small>
                                   <small data-th-text="${location.locationType}"></small>
                             <p data-th-text="${location.address}"></p>
                             <p data-th-text="${location.description}"></p>  
@@ -65,9 +65,7 @@
                         <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
                         Provide Address: <input type="text" name="address" /> <br />
                         Provide Description: <textarea name="description"></textarea> <br />
-                        <!--
-                        Image to upload: <input type="file" name="location" /> <br />
-                        -->
+                        Image Url: <input type="url" name="imageName" placeholder="http://"/> <br />
                         <input type="submit" value="Add Location"/><br />
                     </form>
                      <hr />
@@ -79,17 +77,11 @@
                       </form>
                     
                     <hr />
-                      <h2>Update a location:</h2>
-                        <form data-th-action="@{/locations/put}" name="updateLocationForm" method="put">
-                         id for update: <input type="text" name="id" /><br /> 
-                         Location Name: <input type="text" name="locationName" /><br />
-                       <input type="submit" value="Update"/>
-                      </form>
-                    <!--
                    
                         <a data-th-href="@{/files}">Upload a File</a>
+                                                  
+                
                     
-                    -->
                     <hr />
 
                     <form data-th-action="@{/logout}" method="post">
@@ -100,6 +92,9 @@
                 </div> 
             </div>
             
+          <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
+          <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
+        </footer>  
     </div>
    
     </body>

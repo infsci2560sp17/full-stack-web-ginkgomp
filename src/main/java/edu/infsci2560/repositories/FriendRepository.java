@@ -7,7 +7,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
 
 import edu.infsci2560.models.Friend;
 
-public interface FriendRepository extends CrudRepository<Friend, Long>{
+public interface FriendRepository extends PagingAndSortingRepository<Friend, Long>{
 	
-	List<Friend> findByPetName(String petName);
 }

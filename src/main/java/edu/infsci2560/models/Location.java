@@ -37,7 +37,7 @@ public class Location {
     protected LocationType locationType;
     protected String address;
     protected String description;
-
+    protected String imageName;
 
     public Location() {
         this.id = Long.MAX_VALUE;
@@ -45,20 +45,22 @@ public class Location {
         this.locationType = LocationType.Unknown;
         this.address = null;
         this.description = null;
+        this.imageName = null;
     }
 
-    public Location(Long id, String locationName, LocationType locationType, String address, String description) {
+    public Location(Long id, String locationName, LocationType locationType, String address, String description, String imageName) {
       this.id = id;
       this.locationName = locationName;
       this.locationType = locationType;
       this.address = address;
       this.description = description;
+      this.imageName = imageName;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address +  ",description=" + this.description + " ]";
+        return "[ id=" + this.id + ", locationName=" + this.locationName + ", locationType=" + this.locationType + ", address=" + this.address +  ",description=" + this.description + ", imageName=" + this.imageName + " ]";
     }
 
     @Override
@@ -142,5 +144,13 @@ public class Location {
         this.description = description;
     }
 
+    
+    public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
 
 }

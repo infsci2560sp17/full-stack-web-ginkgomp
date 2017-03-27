@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Wenwen Sun
  */
 @RestController
-@RequestMapping("/friends")
+@RequestMapping("/public/api/friends")
 public class FriendService {
 
     @Autowired
@@ -51,18 +51,5 @@ public class FriendService {
         return new ResponseEntity<>(repository.save(friends), headers, HttpStatus.OK);
     }
     
-    @RequestMapping(method=RequestMethod.DELETE, value="/{id}")
-    public void delete(@PathVariable Long id) {
-    	repository.delete(id);
-
-    }
-    
-    @RequestMapping(method=RequestMethod.PUT, value="/{id}")
-    public Friend update(@PathVariable Long id, @RequestBody Friend friend) {
-    	Friend update = repository.findOne(id);
-        update.setPetName(friend.getPetName());
-        update.setPetBreed(friend.getPetBreed());
-        update.setPetAge(friend.getPetAge());
-        return repository.save(update);
-    }
+   
 }

@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,6 +30,11 @@ public class FriendController {
     public ModelAndView index() {
         return new ModelAndView("friends", "friends", repository.findAll());
     }
+    
+    @RequestMapping(value = "friends/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("friends", "friends", repository.findOne(id));
+    }
 
     @RequestMapping(value = "friends/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Friend friend, BindingResult result) {
@@ -45,15 +51,7 @@ public class FriendController {
         return new ModelAndView("friends", "friends", repository.findAll());
     }
     
-    @RequestMapping(value = "friends/update", method = RequestMethod.GET)
-    public ModelAndView update(@RequestParam(value="id", required=true) @RequestBody Friend friend, Long id) {
-    	Friend update = repository.findOne(id);
-    	if ( update != null ) {
-    		update.setPetName(friend.getPetName());
-            update.setPetBreed(friend.getPetBreed());
-            update.setPetAge(friend.getPetAge());
-        }
-        return new ModelAndView("friends", "friends", repository.findAll());
-    }
+    
+    
 
 }

@@ -12,7 +12,7 @@
         <div>
             <form data-th-action="@{/files}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                
 <!--            <form data-th-action="@{/files(${_csrf.parameterName}=${_csrf.token})}" name="uploadFileForm" method="POST" enctype="multipart/form-data" >                                -->
-                File to upload:<input type="file" name="file" /><br />
+                image to upload:<input type="file" name="file" /><br />
                 <input type="submit" value="Upload" />
             </form>
         </div>
@@ -20,9 +20,14 @@
         <div>
             <ul>
                 <li data-th-each="file : ${files}">
-                    <a data-th-href="${file}" data-th-text="${file}"></a>
+                    <img data-th-src="${file}" />
                 </li>
+                
             </ul>
         </div>
+        
+        <a data-th-href="@{/friends}">Go back to friends list</a><br />
+        <a data-th-href="@{/locations}">Go back to locations</a><br />
+        <a data-th-href="@{/blogs}">Go back to blog posts</a><br />
     </body>
 </html>

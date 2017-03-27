@@ -1,5 +1,7 @@
 package edu.infsci2560.models;
 
+import java.net.URL;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,27 +23,30 @@ public class Friend {
     protected Long id;
     protected String petName;
     protected String petBreed;
-    protected int petAge;
+    protected String petAge;
+    protected String imageName;
 
 
     public Friend() {
         this.id = Long.MAX_VALUE;
         this.petName = null;
         this.petBreed = null;
-        this.petAge = 0;
+        this.petAge = null;
+        this.imageName = null;
     }
 
-    public Friend(Long id, String petName, String petBreed, int petAge) {
+    public Friend(Long id, String petName, String petBreed, String petAge, String imageName) {
       this.id = id;
       this.petName = petName;
       this.petBreed = petBreed;
       this.petAge = petAge;
+      this.imageName = imageName;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", petName=" + this.petName + ", petBreed=" + this.petBreed +  ", petAge=" + this.petAge + " ]";
+        return "[ id=" + this.id + ", petName=" + this.petName + ", petBreed=" + this.petBreed +  ", petAge=" + this.petAge + ", imageName=" + this.imageName + " ]";
        
     }
 
@@ -101,15 +106,25 @@ public class Friend {
     /**
      * @return the petAge
      */
-    public int getPetAge() {
+    public String getPetAge() {
         return petAge;
     }
 
     /**
      * @param content the content to set
      */
-    public void setPetAge(int petAge) {
+    public void setPetAge(String petAge) {
         this.petAge = petAge;
     }
+
+	public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
+    
+    
 
  }
