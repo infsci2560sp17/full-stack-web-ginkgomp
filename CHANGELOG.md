@@ -16,12 +16,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Friends view page
 - Blog Entity
 - Blog Respository
-- RESTful web service (GET, POST) for blogs and return JSON
+- RESTful web service (GET, POST, PUT, DELETE) for blogs and return JSON
 - Blog Controller
 - Blogs view page
 - Event Entity
 - Event Respository
-- RESTful web service (GET, POST) for photos and return JSON
+- RESTful web service (GET) for photos and return JSON
 - Event Controller
 - Photos view page
 - More CSS, Bootstrap styles 
