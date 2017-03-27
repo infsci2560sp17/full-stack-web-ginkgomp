@@ -28,7 +28,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Wenwen Sun
  */
 @RestController
-@RequestMapping("/public/api/locations")
+@RequestMapping("/locations")
 public class LocationsService {
 
     @Autowired

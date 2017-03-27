@@ -44,13 +44,13 @@
                     <div data-th-each="blog :${blogs}">
                     <h2 data-th-text="${blog.title}" style="display:inline-block"></h2> <small data-th-text="${blog.id}"></small>
                 <p class="lead" data-th-text="${blog.author}" style="display:inline-block"></p>
-                <small><span class="glyphicon glyphicon-time"></span> Posted on $Date</small>
+                <small><span class="glyphicon glyphicon-time"></span> Posted on Date</small>
                 <hr/>
                 <img class="img-responsive" data-th-src="${blog.imageName}" width="500" data-th-alt="${blog.title}" />
                 <hr/>
                 <p data-th-text="${blog.content}"></p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-
+                <p><a href="#" data-th-href="@{/blogs/update/{id}(id=${blog.id})}">Edit</a></p>
                 <hr/>
                     </div>
                 </div>
@@ -65,7 +65,7 @@
                         <label for="author">Author:</label>
                         <input type="text" name="author" /> <br />
                         <label for="content">Content:</label>
-                       <textarea name="description"></textarea> <br />
+                       <textarea name="content"></textarea> <br />
                         <label for="imageName"> Image Url:</label>
                        <input type="url" name="imageName" placeholder="http://"/> <br />
                         

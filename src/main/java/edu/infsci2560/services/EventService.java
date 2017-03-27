@@ -18,7 +18,7 @@ import edu.infsci2560.repositories.EventRepository;
 * @author Wenwen Sun
 */
 @RestController
-@RequestMapping("/public/api/photos")
+@RequestMapping("/photos")
 public class EventService {
 
    @Autowired

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Locations</title>
+    </head>
+    <body>
+        Update a Location: <br />
+        <form data-th-method="put" data-th-action="@{/locations/update/{id}(id=${location.id})}" data-th-object="${location}">
+            Location Name: <input type="text" name="locationName" data-th-value="${location.locationName}"/><br />
+            Location Type:<br />
+                        <input type="radio" name="locationType" value="Unknown" /> Unknown<br />
+                        <input type="radio" name="locationType" value="PublicPark" /> Public Park<br />
+                        <input type="radio" name="locationType" value="CoffeeShop" /> Coffee Shop<br />
+                        <input type="radio" name="locationType" value="Hotel" /> Hotel<br />
+                        <input type="radio" name="locationType" value="Restaurant" /> Restaurant<br />
+                        <input type="radio" name="locationType" value="NaturalAttractions" /> Natural Attractions<br />
+            locationType: <span data-th-value="${location.getLocationType()}" /> <br />
+            Provide Address: <input type="text" name="address" data-th-value="${location.address}" /> <br />
+            Provide Description: <textarea name="description" data-th-value="${location.description}"></textarea> <br />
+            Description: <span data-th-value="${location.getDescription()}" /> <br />
+            Image URL: <input type="url" name="imageName" placeholder="http://" data-th-value="${location.imageName}"/><br />
+            <input type="submit" value="Update a location"/><br />
+           
+        </form>
+    </body>
+</html>
