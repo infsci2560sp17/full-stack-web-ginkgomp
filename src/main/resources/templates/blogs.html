@@ -34,16 +34,17 @@
                   <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
                   <span class="breadcrumb-item active">Blog</span>
                 </nav>
+            <br/>
             <div class="row">
                 <div class="col-xs-2">
                       <h2>add sth later</h2>
                 </div>
 
                 <div class="col-xs-10" id="blogsidebar">
-                    <li data-th-each="blog :${blogs}">
+                    <div data-th-each="blog :${blogs}">
                     <h2 data-th-text="${blog.title}" style="display:inline-block"></h2> <small data-th-text="${blog.id}"></small>
-                <p class="lead" data-th-text="${blog.author}"></p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on $Date</p>
+                <p class="lead" data-th-text="${blog.author}" style="display:inline-block"></p>
+                <small><span class="glyphicon glyphicon-time"></span> Posted on $Date</small>
                 <hr/>
                 <img class="img-responsive" data-th-src="${blog.imageName}" width="500" data-th-alt="${blog.title}" />
                 <hr/>
@@ -51,7 +52,7 @@
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
                 <hr/>
-                    </li>
+                    </div>
                 </div>
             </div>
           <hr />
@@ -77,13 +78,14 @@
                     
                     <br /> 
                     
-                    <h2>Delete a Post:</h2>
+                    <h5>Delete a Post:</h5>
                       <form data-th-action="@{/blogs/delete}" name="deleteBlogForm" method="delete">
                          id for delete: <input type="text" name="id" /><br /> 
                        <input type="submit" value="Delete"/>
                       </form>
                     
-                    
+                    <br />
+                    <hr />
                     <form data-th-action="@{/logout}" method="post">
                         <input type="submit" value="Sign Out"/>
                     </form>

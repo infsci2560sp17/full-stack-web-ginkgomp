@@ -27,6 +27,7 @@ public class Event {
     protected String eventTitle;
     protected String eventDate;
     protected String eventContent;
+    protected String imageName;
 
 
     public Event() {
@@ -34,19 +35,21 @@ public class Event {
         this.eventTitle = null;
         this.eventDate = null;
         this.eventContent = null;
+        this.imageName = null;
     }
 
-    public Event(Long id, String eventTitle, String eventDate, String eventContent) {
+    public Event(Long id, String eventTitle, String eventDate, String eventContent, String imageName) {
       this.id = id;
       this.eventTitle = eventTitle;
       this.eventDate = eventDate;
       this.eventContent = eventContent;
+      this.imageName = imageName;
   }
 
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", eventTitle=" + this.eventTitle + ", eventDate=" + this.eventDate +  ",eventContent=" + this.eventContent + " ]";
+        return "[ id=" + this.id + ", eventTitle=" + this.eventTitle + ", eventDate=" + this.eventDate +  ",eventContent=" + this.eventContent + ", imageName=" + this.imageName +" ]";
     }
 
     @Override
@@ -116,6 +119,14 @@ public class Event {
     public void setEventContent(String eventContent) {
         this.eventContent = eventContent;
     }
+    
+    public String getImageName() {
+		return imageName;
+	}
+
+	public void setImageName(String imageName) {
+		this.imageName = imageName;
+	}
 
 
 }

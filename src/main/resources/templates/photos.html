@@ -68,7 +68,7 @@
                         <div class="col-xs-10 row tlcontainer" data-th-each="photo :${photos}" data-th-attr="data-date=${photo.eventDate}">   
                           
                                 <div class="col-xs-4">
-                                 <img src="../static/image/Hueston_Woods_Dog_Camping.jpg" data-th-src="@{/image/Hueston_Woods_Dog_Camping.jpg}" class="image" alt="" width="200" />
+                                 <img data-th-src="@{/image/{imageName}(imageName=${photo.imageName})}" class="image" data-th-alt="${photo.eventTitle}" width="100%" />
                                 </div>
                                 <div class="col-xs-8">
                                   <p class="eventTitle" data-th-text="${photo.eventTitle}"></p><br/>
@@ -87,12 +87,14 @@
       
 </div>
 
-      
+      <br />
+    <br />
+   
       
   
                   
     <hr />
-      <footer class="footer" style="height: 30px; position: absolute;bottom: 0; width: 100%;">
+      <footer class="footer" style="height: 30px; position: relative;bottom: 0; width: 100%;">
           <p class="text-muted" style="text-align: center">Copyright(c) 2017 | YukiANDYuto | All Rights Reserved</p>   
         </footer>
     

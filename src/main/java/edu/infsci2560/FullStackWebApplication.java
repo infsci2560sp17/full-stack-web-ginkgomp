@@ -40,15 +40,15 @@ public class FullStackWebApplication {
         repositoryb.save(new Blog(2L,"Blog#2","Author1","xxxxxxxx","http://oi68.tinypic.com/10nyxya.jpg"));
         
         EventRepository repositorye = ctx.getBean(EventRepository.class);
-        repositorye.save(new Event(1L,"Yuki's Birth","2015-03-07","On March 7th, 2015, our little angel (sometimes can be an evil) -- Yuki was born."));
-        repositorye.save(new Event(1L,"Yuto's Birth","2015-03-16","Yuto's birthday is on March 16th. As a Golden Retriever, she is so cute and lovely."));        
-        repositorye.save(new Event(1L,"New Home","2015-05-03","Yuki and Yuto come to our home! Yuki comes from a small Village in Indiana. She is the youngest among her sibings. Yuto comes from a small town of Indiana, she has bright eyes and there are heart-shaped hair on her chest."));
-        repositorye.save(new Event(1L,"2 Months Old","2015-05-12","Yuki and Yuto adapt to the new environment only a few days after they moved in."));
-        repositorye.save(new Event(1L,"Smiley Angel","2015-05-23","Yuki smiles like an angel."));
-        repositorye.save(new Event(2L,"1st Birthday","2016-03-11","We celebrate their birthday together, eating cakes that has designated designs for them."));
-        repositorye.save(new Event(2L,"First Time Boarding","2016-03-20","While we head to San Franciso for Spring Break, they spend first week away from us, boarding with other dogs."));
-        repositorye.save(new Event(2L,"Move to Pittsburgh","2016-08-09","We move to pittsburgh for school they move to pittsburgh for fun"));
-        repositorye.save(new Event(3L,"Two Years Old","2017-03-07","They turn to two while are as cute as the little puppies first brought into our family"));
+        repositorye.save(new Event(1L,"Yuki's Birth","2015-03-07","On March 7th, 2015, our little angel (sometimes can be an evil) -- Yuki was born.","1.jpeg"));
+        repositorye.save(new Event(1L,"Yuto's Birth","2015-03-16","Yuto's birthday is on March 16th. As a Golden Retriever, she is so cute and lovely.","2.jpeg"));        
+        repositorye.save(new Event(1L,"New Home","2015-05-03","Yuki and Yuto come to our home! Yuki comes from a small Village in Indiana. She is the youngest among her sibings. Yuto comes from a small town of Indiana, she has bright eyes and there are heart-shaped hair on her chest.","3.jpeg"));
+        repositorye.save(new Event(1L,"2 Months Old","2015-05-12","Yuki and Yuto adapt to the new environment only a few days after they moved in.","4.jpeg"));
+        repositorye.save(new Event(1L,"Smiley Angel","2015-05-23","Yuki smiles like an angel.","5.jpeg"));
+        repositorye.save(new Event(2L,"1st Birthday","2016-03-11","We celebrate their birthday together, eating cakes that has designated designs for them.","6.jpeg"));
+        repositorye.save(new Event(2L,"First Time Boarding","2016-03-20","While we head to San Franciso for Spring Break, they spend first week away from us, boarding with other dogs.","7.jpeg"));
+        repositorye.save(new Event(2L,"Move to Pittsburgh","2016-08-09","We move to pittsburgh for school they move to pittsburgh for fun","8.jpeg"));
+        repositorye.save(new Event(3L,"Two Years Old","2017-03-07","They turn to two while are as cute as the little puppies first brought into our family","9.jpeg"));
         		
         FriendRepository repositoryf = ctx.getBean(FriendRepository.class);
         repositoryf.save(new Friend(1L,"Genki","Husky","3","http://cdn3-www.dogtime.com/assets/uploads/gallery/siberian-husky-dog-breed-pictures/siberian-husky-dog-breed-pictures-5.jpg"));

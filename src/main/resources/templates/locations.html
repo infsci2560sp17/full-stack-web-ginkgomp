@@ -29,10 +29,11 @@
                   <a class="breadcrumb-item" data-th-href="@{/home}">Home</a>
                   <span class="breadcrumb-item active">Ideas</span>
                 </nav>
-                <br/>
-                <h1> Pet-friendly Public Location Lists </h1>
+          
+                <br />
 
                 <div class="col-xs-12">
+                    <h1> Pet-friendly Public Location Lists </h1>
                       <ul class="media-list">  
                           <li class="media" data-th-each="location : ${locations}">
                           <div class="media-left">
@@ -70,7 +71,7 @@
                     </form>
                      <hr />
                     
-                      <h2>Delete a location:</h2>
+                      <h5>Delete a location:</h5>
                       <form data-th-action="@{/locations/delete}" name="deleteLocationForm" method="delete">
                          id for delete: <input type="text" name="id" /><br /> 
                        <input type="submit" value="Delete"/>

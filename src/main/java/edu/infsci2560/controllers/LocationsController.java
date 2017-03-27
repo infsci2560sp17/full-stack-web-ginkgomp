@@ -45,6 +45,11 @@ public class LocationsController {
         repository.save(location);
         return new ModelAndView("locations", "locations", repository.findAll());
     }
+    
+    @RequestMapping(value = "locations/{id}", method = RequestMethod.GET)
+    public ModelAndView index(@PathVariable Long id) {        
+        return new ModelAndView("locations", "locations", repository.findOne(id));
+    }
 
     @RequestMapping(value = "locations/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)
