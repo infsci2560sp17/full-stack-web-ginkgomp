@@ -14,19 +14,19 @@ import edu.infsci2560.models.Friend;
 import edu.infsci2560.repositories.FriendRepository;
 
 @Controller
-public class FriendUpdateController {
+public class FriendEditController {
 	
 	@Autowired
     private FriendRepository repository;
 	
-	@RequestMapping(value = "friends/update/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "friends/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Friend friend = repository.findOne(id);
-        return new ModelAndView("friendsUpdate", "friend", friend);
+        return new ModelAndView("friendsEdit", "friend", friend);
     }
     
     
-    @RequestMapping(value = "friends/update/{id}", method = RequestMethod.PUT, produces = "application/json")
+    @RequestMapping(value = "friends/edit/{id}", method = RequestMethod.PUT, produces = "application/json",consumes="application/x-www-form-urlencoded")
     	public String update( @Valid Friend friend, BindingResult result) {
             repository.save(friend);
             return "redirect:/friends";

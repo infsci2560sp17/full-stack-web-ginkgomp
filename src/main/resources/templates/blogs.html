@@ -50,7 +50,7 @@
                 <hr/>
                 <p data-th-text="${blog.content}"></p>
                 <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <p><a href="#" data-th-href="@{/blogs/update/{id}(id=${blog.id})}">Edit</a></p>
+                <p><a href="#" data-th-href="@{/blogs/edit/{id}(id=${blog.id})}">Edit</a></p>
                 <hr/>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     <hr />
                     
                     <a data-th-href="@{/files}">Upload a File</a>
-                    
+                          
                     <br /> 
                     
                     <h5>Delete a Post:</h5>

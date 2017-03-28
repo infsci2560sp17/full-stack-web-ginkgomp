@@ -1,7 +1,8 @@
 package edu.infsci2560.controllers;
 
+import edu.infsci2560.models.Blog;
 import edu.infsci2560.models.Friend;
-import edu.infsci2560.repositories.FriendRepository;
+import edu.infsci2560.repositories.BlogRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -22,36 +23,34 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Wenwen Sun
  */
 @Controller
-public class FriendController {
+public class BlogsController {
     @Autowired
-    private FriendRepository repository;
+    private BlogRepository repository;
 
-    @RequestMapping(value = "friends", method = RequestMethod.GET)
+    @RequestMapping(value = "blogs", method = RequestMethod.GET)
     public ModelAndView index() {
-        return new ModelAndView("friends", "friends", repository.findAll());
+        return new ModelAndView("blogs", "blogs", repository.findAll());
     }
     
-    @RequestMapping(value = "friends/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "blogs/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) {        
-        return new ModelAndView("friends", "friends", repository.findOne(id));
+        return new ModelAndView("blogs", "blogs", repository.findOne(id));
     }
 
-    @RequestMapping(value = "friends/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid Friend friend, BindingResult result) {
-        repository.save(friend);
-        return new ModelAndView("friends", "friends", repository.findAll());
+    @RequestMapping(value = "blogs/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    public ModelAndView create(@ModelAttribute @Valid Blog blog, BindingResult result) {
+        repository.save(blog);
+        return new ModelAndView("blogs", "blogs", repository.findAll());
     }
     
-    @RequestMapping(value = "friends/delete", method = RequestMethod.GET)
+    @RequestMapping(value = "blogs/delete", method = RequestMethod.GET)
     public ModelAndView delete(@RequestParam(value="id", required=true) Long id) {
-        Friend friend = repository.findOne(id);  
-        if ( friend != null ) {
+        Blog blog = repository.findOne(id);  
+        if ( blog != null ) {
             repository.delete(id);
         }
-        return new ModelAndView("friends", "friends", repository.findAll());
+        return new ModelAndView("blogs", "blogs", repository.findAll());
     }
-    
-    
-    
 
+    
 }

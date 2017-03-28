@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Friends</title>
+    </head>
+    <body>
+        Update a Friend: <br />
+        <form data-th-method="put" data-th-action="@{/friends/edit/{id}(id=${friends.id})}" data-th-object="${friends}" role="form">
+            Pet Name: <input type="text" name="petName" data-th-value="${friends.petName}" /><br />
+            Pet Breed: <input type="text" name="petBreed" data-th-value="${friends.petBreed}" /><br />
+            Pet Age: <input type="text" name="petAge" data-th-value="${friends.petAge}" /><br />
+            Image URL: <input type="url" name="imageName" placeholder="http://" data-th-value="${friends.imageName}"/><br />
+            <input type="submit" value="Update a friend"/><br />
+           
+        </form>
+    </body>
+</html>

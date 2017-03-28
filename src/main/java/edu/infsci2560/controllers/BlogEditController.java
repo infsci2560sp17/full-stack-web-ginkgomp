@@ -14,19 +14,19 @@ import edu.infsci2560.models.Blog;
 import edu.infsci2560.repositories.BlogRepository;
 
 @Controller
-public class BlogUpdateController {
+public class BlogEditController {
 
 	@Autowired
     private BlogRepository repository;
 	
-	@RequestMapping(value = "blogs/update/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "blogs/edit/{id}", method = RequestMethod.GET)
     public ModelAndView index(@PathVariable Long id) { 
         Blog blog = repository.findOne(id);
-        return new ModelAndView("blogsUpdate", "blog", blog);
+        return new ModelAndView("blogEdit", "blog", blog);
     }
     
     
-    @RequestMapping(value = "blogs/update/{id}", method = RequestMethod.PUT, produces = "application/json")
+    @RequestMapping(value = "blogs/edit/{id}", method = RequestMethod.PUT, produces = "application/json")
     	public String update( @Valid Blog blog, BindingResult result) {
             repository.save(blog);
             return "redirect:/blogs";

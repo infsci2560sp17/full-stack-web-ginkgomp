@@ -5,7 +5,7 @@
     </head>
     <body>
         Update a Location: <br />
-        <form data-th-method="put" data-th-action="@{/locations/update/{id}(id=${location.id})}" data-th-object="${location}">
+        <form data-th-method="put" data-th-action="@{/locations/edit/{id}(id=${location.id})}" data-th-object="${location}" role="form">
             Location Name: <input type="text" name="locationName" data-th-value="${location.locationName}"/><br />
             Location Type:<br />
                         <input type="radio" name="locationType" value="Unknown" /> Unknown<br />

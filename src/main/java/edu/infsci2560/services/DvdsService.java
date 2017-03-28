@@ -5,8 +5,9 @@
  */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.Blog;
-import edu.infsci2560.repositories.BlogRepository;
+import edu.infsci2560.models.Dvd;
+import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.repositories.DvdRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,30 +25,30 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author Wenwen Sun
+ * @author kolobj
  */
 @RestController
-@RequestMapping("/blogs")
-public class BlogService {
+@RequestMapping("/public/api/dvds")
+public class DvdsService {
 
     @Autowired
-    private BlogRepository repository;
+    private DvdRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<Blog>> list() {
+    public ResponseEntity<Iterable<Dvd>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Blog> list(@PathVariable("id") Long id) {
+    public ResponseEntity<Dvd> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<Blog> create(@RequestBody Blog blogs) {
+    public ResponseEntity<Dvd> create(@RequestBody Dvd dvd) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(blogs), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(dvd), headers, HttpStatus.OK);
     }
 }
