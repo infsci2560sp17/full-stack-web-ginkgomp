@@ -8,9 +8,9 @@
         Update a Post: <br />
         <form data-th-method="put" data-th-action="@{/blogs/edit/{id}(id=${blog.id})}" data-th-object="${blog}" role="form">
             
-            Title:: <input type="text" name="title" data-th-value="${blog.title}" /><br />
+            Title: <input type="text" name="title" data-th-value="${blog.title}" /><br />
             Author: <input type="text" name="author" data-th-value="${blog.author}" /><br />
-            Content:: <input type="text" name="content" data-th-value="${blog.content}" /><br />
+            Content: <input type="text" name="content" data-th-value="${blog.content}" /><br />
             Image URL: <input type="url" name="imageName" placeholder="http://" data-th-value="${blog.imageName}"/><br />
             <input type="submit" value="Update a Post"/><br />
            <input type="hidden" data-th-name="${_csrf.parameterName}" data-th-value="${_csrf.token}"/>

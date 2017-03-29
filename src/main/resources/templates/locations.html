@@ -55,7 +55,7 @@
         <hr />
             <div class="row">   
                 <div class="col-xs-12">
-                    Add Pet-friendly Public Locations:<br />
+                    <h5> Add Pet-friendly Public Locations:</h5><br />
                     <form data-th-action="@{/locations/add}" name="addLocationForm" method="post">
                         Location Name: <input type="text" name="locationName" /><br />
                         Location Type:<br />
@@ -72,6 +72,9 @@
                     </form>
                      <hr />
                     
+                    <a data-th-href="@{/files}">Upload an image to show</a>
+                    
+                    <br />
                       <h5>Delete a location:</h5>
                       <form data-th-action="@{/locations/delete}" name="deleteLocationForm" method="delete">
                          id for delete: <input type="text" name="id" /><br /> 
@@ -80,10 +83,10 @@
                     
                     <hr />
                    
-                        <a data-th-href="@{/files}">Upload a File</a>
+                        
                                                   
                 
-                    
+                    <br />
                     <hr />
 
                     <form data-th-action="@{/logout}" method="post">

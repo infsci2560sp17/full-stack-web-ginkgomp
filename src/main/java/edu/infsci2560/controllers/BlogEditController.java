@@ -26,7 +26,7 @@ public class BlogEditController {
     }
     
     
-    @RequestMapping(value = "blogs/edit/{id}", method = RequestMethod.PUT, produces = "application/json")
+    @RequestMapping(value = "blogs/edit/{id}", method = RequestMethod.POST, produces = "application/json")
     	public String update( @Valid Blog blog, BindingResult result) {
             repository.save(blog);
             return "redirect:/blogs";

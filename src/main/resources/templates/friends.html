@@ -57,7 +57,7 @@
           <hr />
              <div class="row">
                 <div class="col-xs-12">
-                    Add a new friend:<br />
+                    <h5>Add a new friend:</h5><br />
                     <form data-th-action="@{/friends/add}" name="addFriendForm" method="post">
                         <label for="petName">Name:</label>
                          <input type="text" name="petName" /><br />
@@ -73,10 +73,10 @@
                     
                     <hr />
                     
-                    <a data-th-href="@{/files}">Upload a File</a>
+                    <a data-th-href="@{/files}">Upload an image to show</a>
                     
                     <br /> 
-                    <p>Delete a friend:</p>
+                    <h5>Delete a friend:</h5>
                     <form data-th-action="@{/friends/delete}" name="deleteFriendForm" method="delete">
                     pet id: <input type="text" name="id" /><br /> 
                     <input type="submit" value="Delete a Friend"/>

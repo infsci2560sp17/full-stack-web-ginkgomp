@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Spring Security Example </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        
+        <title>Yuki AND Yuto</title>
     </head>
     <body>        
         <div data-th-if="${param.error}">
@@ -11,8 +13,11 @@
         <div data-th-if="${param.logout}">
             You have been logged out.
         </div>
+        
+       
         <form data-th-action="@{/login}" method="post">
-            <div><label> User Name: <input type="text" name="username"/> </label></div>
+            
+            <div><label> User Name: <input type="text" name="username"/> </label></div><br/>
             <div><label> Password: <input type="password" name="password"/> </label></div>
             <div><input type="submit" value="Sign In"/></div>
         </form>

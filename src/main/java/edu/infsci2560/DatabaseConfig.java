@@ -8,10 +8,14 @@ package edu.infsci2560;
 import java.net.URI;
 import java.net.URISyntaxException;
 import org.apache.commons.dbcp.BasicDataSource;
+import org.apache.tomcat.jdbc.pool.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
@@ -19,12 +23,12 @@ import org.springframework.context.annotation.Profile;
 public class DatabaseConfig {
     private static final Logger log = LoggerFactory.getLogger(FullStackWebApplication.class);
     
-//    @Bean
-//    @Primary
-//    @ConfigurationProperties(prefix = "spring.datasource")
-//    public DataSource dataSource() {
-//        return DataSourceBuilder.create().build();
-//    }
+   // @Bean
+    //@Primary
+   //@ConfigurationProperties(prefix = "spring.datasource")
+    //public DataSource dataSource() {
+      //  return DataSourceBuilder.create().build();
+    //}
     @Bean
     public BasicDataSource dataSource() throws URISyntaxException {
         URI dbUri = new URI(System.getenv("DATABASE_URL"));

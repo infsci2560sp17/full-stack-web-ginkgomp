@@ -33,7 +33,7 @@ public class LocationEditController {
         return new ModelAndView("locationEdit", "location", location);
     }
     
-    @RequestMapping(value = "locations/edit/{id}", method = RequestMethod.PUT, consumes="application/x-www-form-urlencoded", produces = "application/json")
+    @RequestMapping(value = "locations/edit/{id}", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public String update( @Valid Location location, BindingResult result) {
         repository.save(location);
         return "redirect:/locations";

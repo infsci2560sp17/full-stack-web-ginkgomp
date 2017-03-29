@@ -37,7 +37,7 @@
             <br/>
             <div class="row">
                 <div class="col-xs-2">
-                      <h2>add sth later</h2>
+                      <h2>Categories</h2>
                 </div>
 
                 <div class="col-xs-10" id="blogsidebar">
@@ -49,7 +49,7 @@
                 <img class="img-responsive" data-th-src="${blog.imageName}" width="500" data-th-alt="${blog.title}" />
                 <hr/>
                 <p data-th-text="${blog.content}"></p>
-                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+                <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a><br />
                 <p><a href="#" data-th-href="@{/blogs/edit/{id}(id=${blog.id})}">Edit</a></p>
                 <hr/>
                     </div>
@@ -58,7 +58,7 @@
           <hr />
              <div class="row">
                 <div class="col-xs-12">
-                    Add a new post:<br />
+                    <h5>Add a new post:</h5><br />
                     <form data-th-action="@{/blogs/add}" name="addBlogForm" method="post">
                         <label for="title">Title:</label>
                          <input type="text" name="title" /><br />
@@ -74,8 +74,9 @@
                     
                     <hr />
                     
-                    <a data-th-href="@{/files}">Upload a File</a>
-                          
+                    <a data-th-href="@{/files}">Upload an image to show</a>
+                    
+                    
                     <br /> 
                     
                     <h5>Delete a Post:</h5>

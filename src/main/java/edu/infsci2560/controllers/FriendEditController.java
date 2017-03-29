@@ -26,7 +26,7 @@ public class FriendEditController {
     }
     
     
-    @RequestMapping(value = "friends/edit/{id}", method = RequestMethod.PUT, produces = "application/json",consumes="application/x-www-form-urlencoded")
+    @RequestMapping(value = "friends/edit/{id}", method = RequestMethod.POST, produces = "application/json",consumes="application/x-www-form-urlencoded")
     	public String update( @Valid Friend friend, BindingResult result) {
             repository.save(friend);
             return "redirect:/friends";
