@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
-## [v1.5](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.4...v1.5)- 2017-04-22
+## [v1.5](https://github.com/infsci2560sp17/full-stack-web-ginkgomp/compare/v1.4...v1.5) - 2017-04-22
 ### Changed
 - Accounts page 
 
