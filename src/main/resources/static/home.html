@@ -8,19 +8,19 @@
    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap.min.css}" rel="stylesheet" />
 
    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css" data-th-href="@{/webjars/bootstrap/3.3.1/css/bootstrap-theme.min.css}" rel="stylesheet" />
-        
+
     <link href="../static/css/main.css" data-th-href="@{css/main.css}" rel="stylesheet" media="screen" />
-    
+
    <link href="../static/css/jquery.lavalamp.css" data-th-href="@{css/jquery.lavalamp.css}" rel="stylesheet" media="screen" />
-    
+
     <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
             data-th-src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
-   
-        
+
+
     <script src="../static/js/lib/jquery.lavalamp.min.js" data-th-src="@{js/lib/jquery.lavalamp.min.js}"></script>
-        
- 
-        
+
+
+
     </head>
 
 
@@ -30,36 +30,36 @@
         <header class="text-center">
          <img class="img-fluid" src="../public/logo%20-large.png" data-th-src="@{/logo%20-large.png}" alt="logo"/>
         </header>
-            </div>    
+            </div>
       <nav class="navbar text-center">
          <ul id="navlist">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about.html">Photos</a></li>
-            <li><a href="/services.html">Videos</a></li>
-            <li><a href="/programs.html">Blog</a></li>
-            <li><a data-th-href="@{/locations}">Ideas</a></li>
-            <li><a href="/programs.html">Friends</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+           <li style="font-size: 1.4em"><a href="home.html" data-th-href="@{/home}">Home</a></li>
+         <li><a href="photos.html" data-th-href="@{/photos}">Photos</a></li>
+         <li><a href="accounts.html" data-th-href="@{/accounts}">Account</a></li>
+         <li><a href="blogs.html" data-th-href="@{/blogs}">Blog</a></li>
+         <li><a href="locations.html" data-th-href="@{/locations}">Ideas</a></li>
+         <li><a href="friends.html" data-th-href="@{/friends}">Friends</a></li>
+         <li><a href="contact.html" data-th-href="@{/contact}">Contact</a></li>
         </ul>
-  </nav> 
-        </div>        
-       
+  </nav>
+        </div>
+
 
         <p>Click <a data-th-href="@{/locations}">here</a> to see a Pet-friendly public location list!</p>
-    
-    
-   
-    
+
+
+
+
         <script type="text/javascript">
     $(document).ready(function() {
 
         $('#navlist').lavalamp({
     easing: 'easeOutBack',
     margins:true
-}); 
+});
     });
-        
+
     </script>
-    
+
     </body>
 </html>
